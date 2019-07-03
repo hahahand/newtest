@@ -1,0 +1,325 @@
+\documentclass[a4paper]{article}
+\usepackage{CJK}
+\usepackage{geometry}% 改变页间距的宏包
+\usepackage{indentfirst}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{latexsym}
+\usepackage[CJKbookmarks]{hyperref} %超链接
+\usepackage{type1cm} %改变字体
+\usepackage{amsmath}%自动换页
+\allowdisplaybreaks[4]
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{lscape}  %横置
+
+
+
+\newcommand{\no}{\nonumber}
+\newcommand{\red}{\color{red}}
+\newcommand{\blue}{\color{blue}}
+\newcommand{\sigs}{{\sigma\text{-S}}}
+\newcommand{\omev}{{\omega\text{-V}}}
+\newcommand{\couv}{{A\text{-V}}}
+\newcommand{\rhov}{{\rho\text{-V}}}
+\newcommand{\rhot}{{\rho\text{-T}}}
+\newcommand{\rhvt}{{\rho\text{-VT}}}
+\newcommand{\pipv}{{\pi\text{-PV}}}
+\newcommand{\CoM}{{\text{c.m.}}}
+\newcommand{\Ephi}{{\text{E}_{\phi}}}
+
+\newcommand{\lcrl}[1]{\left<#1\right|}
+\newcommand{\llrc}[1]{\left|#1\right>}
+%\newcommand{\bm}[1]{\bm{{\color{red} #1}}}
+%\newcommand{\bm}{\nonumber}
+\newcommand{\bmm}[1]{{\color{red}\bm{#1}}}
+
+
+\geometry{left=1.0cm,right=1.0cm,top=2.0cm,bottom=2.0cm}
+\begin{document}
+\begin{CJK*}{GBK}{song}
+\renewcommand\figurename{图}%图中将figure改为图
+\renewcommand\tablename{表}
+\pagenumbering{arabic}%加页码
+\fontsize{12pt}{18pt}
+\selectfont
+\title{deform nuclei $\pi$ -meson derivation}
+\maketitle
+
+The hamiltonian of $\pi$ -meson nuclear couplings can be express as:
+\begin{align}
+\no H_{\pi}=&-\frac{1}{2}\frac{1}{m_{\pi}^{2}}\sum_{\alpha\beta;\alpha'\beta'}\lcrl{\tau_{\alpha}} \vec{\tau} \llrc{\tau_{\alpha'}}\cdot\lcrl{\tau_{\beta}}\vec{\tau}\llrc{\tau_{\beta'}}c_{\alpha}^{\dag}c_{\beta}^{\dag}c_{\beta'}c_{\alpha'}\int d\bmm{r}f_{\pi}(\xi)\int d\bmm{r'}f_{\pi}(\xi')\\
+&\hspace{2em}\times \bar{f}_{\alpha}(\bmm{r})\bar{f}_{\beta}(\bmm{r'})\left(\gamma_{5}\gamma^{k}\right)_{1}\left(\gamma_{5}\gamma^{l}\right)_{2}\partial_{k}(1)\partial_{l}(2)v\left(m_{\pi};1,2\right)f_{\beta'}(\bmm{r'})f_{\alpha'}(\bmm{r})
+\end{align}
+where the Yukawa expanded form of propagator $v(m_{\pi};1,2)$ is:
+\begin{align}
+v(m_{\pi};r,r')=\frac{1}{4\pi}\frac{e^{-m_{\pi}\left|\bmm{r}-\bmm{r'}\right|}}{\left|\bmm{r}-\bmm{r'}\right|}
+\end{align}
+There have no time term. So the differential $\partial_{k}$ and $\partial_{l}$ only include the space differential, which mean that $k$ and $l$ equal 1,2,3.
+
+For the $\pi$ meson-nuclear coupling, there is the exchange term in energy functional:
+\begin{align}\label{equ:energyfunctional}
+\no E_{\pi}=&\frac{1}{2}\frac{1}{m_{\pi}^{2}}\sum_{\alpha\beta}\left(2-\delta_{q_{\alpha}q_{\beta}}\right)\int d\bmm{r}d\bmm{r'}\bar{f}_{\alpha}(\bmm{r})\bar{f}_{\beta}(\bmm{r'})\left(f_{\pi}\gamma_{5}\gamma^{k}\right)_{1}\\
+&\hspace{6em}\left(f_{\pi}\gamma_{5}\gamma^{l}\right)_{2}\partial_{k}(1)\partial_{l}(2)v(m_{\pi};1,2)f_{\alpha}(\bmm{r'})f_{\beta}(\bmm{r})
+\end{align}
+And the space differential of Yukawa propagator can be write as:
+\begin{align}
+\bmm{\nabla}_{r'}\bmm{\nabla}_{r}v(m_{\pi};\bmm{r},\bmm{r'})=m_{\pi}^{2}\sum_{L}\sum_{L_{1}L_{2}}^{L\pm1}C_{L010}^{L_1 0}C_{L010}^{L_2 0}\mathcal{V}_L^{L_1L_2}(m_{\pi};r,r')\bmm{Y}_{LL_{1}}(\hat{\bmm{r}})\cdot\bmm{Y}_{LL_{2}}(\hat{\bmm{r}}_{2})
+\end{align}
+
+\section{WAV FUNCTION}
+The wav function in deform nuclear have to express at the Dirac-Woods-Saxon base. So, we use the following marking method.
+\begin{align}
+&\bar{f}_{\alpha}(\bmm{r})=\bar{\psi}_{\nu \pi m}(\bmm{r}_{a}) &f_{\beta}(\bmm{r})=\psi_{\nu'\pi'm'}(\bmm{r}_{a})\\
+&\bar{f}_{\beta}(\bmm{r'})=\bar{\psi}_{\nu'\pi'm'}(\bmm{r}_{b}) &f_{\alpha}(\bmm{r'})=\psi_{\nu \pi m}(\bmm{r}_{b})
+\end{align}
+The $\bar{f}_{\alpha},\bar{f}_{\beta},f_{\beta}$ and $f_{\alpha}$ are wav function's mark in Eq.(\ref{equ:energyfunctional}), and in deform nuclei, the good quantum is $\pi$, parity and $m$, the third component of angular momentum. Now we express the wav function at the Dirac-Woods-Saxon base.
+\begin{align}
+&\bar{\psi}_{\nu \pi m}(\bmm{r}_{a})=\sum_{a}C_{a,\nu \pi m}^{\dag}\bar{\psi}_{a\pi m} &\psi_{\nu'\pi'm'}(\bmm{r}_{a})=\sum_{a'}C_{a',\nu'\pi'm'}\psi_{a'\pi'm'}\\
+&\bar{\psi}_{\nu'\pi'm'}(\bmm{r}_{b})=\sum_{b'}C_{b',\nu'\pi'm'}^{\dag}\bar{\psi}_{b'\pi'm'}
+&\psi_{\nu\pi m}(\bmm{r}_{b})=\sum_{b}C_{b,\nu\pi m}\psi_{b\pi m}
+\end{align}
+Among them, $a$ and $b$ mean $\left\{n,\kappa\right\}$, and $n$ is the principal quantum number which dependent on the node of big component of spinor $\psi$, and $\kappa$ reflect the angular momentum and spin, in other word, the total angular momentum. C is nothing but the expansion coefficient.
+
+Use this marking method, the $\pi$ -meson nuclear coupling energy functional can rewrite as:
+\begin{align}
+\no E_{\pi}^{E}=&\frac{1}{2}\sum_{\alpha\beta}(2-\delta_{q_{\alpha}q_{\beta}})\int d\bmm{r}_{a}d\bmm{r}_{b}\sum_{L}\sum_{L_{1}L_{2}}^{L\pm1}C_{L010}^{L_{1}0}C_{L010}^{L_{2}0}\mathcal{V}_{L}^{L_1L_2}(m_{\pi};r_{a},r_{b})\bmm{Y}_{LL_{1}}\cdot\bmm{Y}_{LL_{2}}\\
+\no&\left[f_{\pi}\bar{\psi}_{\nu\pi m}\gamma_{5}\bmm{\gamma}\psi_{\nu'\pi'm'}\right]_{\bmm{r}_{a}}\cdot\left[f_{\pi}\bar{\psi}_{\nu'\pi'm'}\gamma_{5}\bmm{\gamma}\psi_{\nu\pi m}\right]_{\bmm{r}_{b}}\\
+\no=&\frac{1}{2}\sum_{\alpha\beta}\left(2-\delta_{q_{\alpha}q_{\beta}}\right)\int d\bmm{r}_{a}d\bmm{r}_{b}\sum_{LM}\sum_{L_{1}L_{2}}^{L\pm1}C_{L010}^{L_{1}0}C_{L010}^{L_{2}0}\mathcal{V}_{L}^{L_{1}L_{2}}(m_{\pi};r_{a},r_{b})\bmm{Y}_{LM}^{L_{1}}\bmm{Y}_{LM}^{L_{2}*}\\
+\no&\left[f_{\pi}\bar{\psi}_{\nu\pi m}\gamma_{5}\bmm{\gamma}\psi_{\nu'\pi'm'}\right]_{\bmm{r}_{a}}\cdot\left[f_{\pi}\bar{\psi}_{\nu'\pi'm'}\gamma_{5}\bmm{\gamma}\psi_{\nu\pi m}\right]_{\bmm{r}_{b}}\\
+\no=&\frac{1}{2}\sum_{\alpha\beta}\left(2-\delta_{q_{\alpha}q_{\beta}}\right)\int d\bmm{r}_{a}d\bmm{r}_{b}\sum_{LM}\sum_{L_{1}L_{2}}^{L\pm1}C_{L010}^{L_{1}0}C_{L010}^{L_{2}0}\mathcal{V}_{L}^{L_{1}L_{2}}(m_{\pi};r_{a},r_{b})\\
+\no&\left[f_{\pi}\bar{\psi}_{\nu\pi m}\gamma_{5}\bmm{\gamma}\cdot\bmm{Y}_{LM}^{L_{1}}\psi_{\nu'\pi'm'}\right]_{\bmm{r}_{a}}\cdot\left[f_{\pi}\bar{\psi}_{\nu'\pi'm'}\gamma_{5}\bmm{\gamma}\cdot\bmm{Y}_{LM}^{L_{2}*}\psi_{\nu\pi m}\right]_{\bmm{r}_{b}}
+\end{align}
+According to 《Quantum theory of angular momentum》 P.64
+\begin{align}
+\left(\mathscr{M}_{J}\cdot\mathscr{N}_{J}\right)=\sum_{M}\mathscr{M}_{JM}\mathscr{N}_{JM}^{*}
+\end{align}
+for the irreducible tensor.
+
+And the term which correspond to the wav function:
+\begin{align}
+\bar{\psi}_{\nu\pi m}\gamma_{5}\bmm{\gamma}\cdot\bmm{Y}_{LM}^{L_{1}}\psi_{\nu'\pi'm'}=&\sum_{aa'}C_{a,\nu\pi m}^{\dag}C_{a',\nu'\pi'm'}\bar{\psi}_{a\pi m}\gamma_{5}\bmm{\gamma}\cdot\bmm{Y}_{LM}^{L_{1}}\psi_{a'\pi'm'}\label{equ:a}\\
+\bar{\psi}_{\nu'\pi'm'}\gamma_{5}\bmm{\gamma}\cdot\bmm{Y}_{LM}^{L_{2}*}\psi_{\nu \pi m}=&\sum_{bb'}C_{b',\nu'\pi'm'}^{\dag}C_{b,\nu\pi m}\bar{\psi}_{b'\pi'm'}\gamma_{5}\bmm{\gamma}\cdot\bmm{Y}_{LM}^{L_{2}*}\psi_{b\pi m}\label{equ:b}
+\end{align}
+Now we will write the concrete form of this term. For the spherical nuclei, the spinor can be express as:
+\begin{align}
+\label{equ:wav1}&\psi_{a\pi m}(r,\vartheta,\varphi)=\frac{1}{r}\left(\begin{array}{c}G(r)\Omega_{j_{a}m}^{l_{a}}(\vartheta,\varphi)\\iF(r)\Omega_{j_{a}m}^{l_{a}'}(\vartheta,\varphi)\end{array}\right)\\
+\label{equ:wav2}&\bar{\psi}_{a\pi m}(r,\vartheta,\varphi)=\frac{1}{r}\left(\begin{array}{cc}G(r)\Omega_{j_{a}m}^{l_{a}\dag}(\vartheta,\varphi)&iF(r)\Omega_{j_{a}m}^{l_{a}'\dag}(\vartheta,\varphi)\end{array}\right)
+\end{align}
+where $\Omega$ is the spinor spherical harmonics, and it can be expressed in terms of scalar spherical harmonic $Y_{LM}(\vartheta,\varphi)$ and spin functions $\chi_{\frac{1}{2}\sigma}$ as:
+\begin{align}
+\Omega_{JM}^{L}(\vartheta,\varphi)=\sum_{m\sigma}C_{LM\frac{1}{2}\sigma}^{JM}Y_{LM}(\vartheta,\varphi)\chi_{\frac{1}{2}\sigma}
+\end{align}
+And we have to mentioned that $l_{a}+l_{a}'=2j_{a}$, which mean that $l_{a}-l_{a}'=\pm1$, it's depend on the sign of $\kappa$.
+
+Then, the wav function (\ref{equ:wav1}) can be write as:
+\begin{align}
+\no&\sum_{aa'}C_{a, \nu\pi m}^{\dag} C_{a',\nu'\pi'm'}\bar{\psi}_{a\pi m}\gamma_{5}\bmm{\gamma}\cdot\bmm{Y}_{LM}^{L_{1}}\psi_{a'\pi'm'}\\
+\no=&\sum_{aa'}C_{a,\nu\pi m}^{\dag}C_{a',\nu'\pi'm'}\frac{1}{r_{a}}\left(\begin{array}{cc}G_{a}\Omega_{j_{a}m}^{l_{a}\dag}&iF_{a}\Omega_{j_{a}m}^{l_{a}'\dag}\end{array}\right)\gamma_{5}\bmm{\gamma}\cdot\bmm{Y}_{LM}^{L_{1}}\frac{1}{r_{a}}\left(\begin{array}{c}G_{a'}\Omega_{j_{a'}m'}^{l_{a'}}\\iF_{a'}\Omega_{j_{a'}m'}^{l_{a'}'}\end{array}\right)\\
+\no=&\sum_{aa'}C_{a,\nu \pi m}^{\dag}C_{a',\nu'\pi'm'}\frac{1}{r_{a}^{2}}\left(\begin{array}{cc}G_{a}\Omega_{j_{a}m}^{l_{a}\dag}&iF_{a}\Omega_{j_{a}m}^{l_{a}'\dag}\end{array}\right)\left(\begin{array}{cc}0&I\\I&0\end{array}\right)\left(\begin{array}{cc}0&\bmm{\sigma}\\-\bmm{\sigma}&0\end{array}\right)\cdot\bmm{Y}_{LM}^{L_{1}}\left(\begin{array}{c}G_{a'}\Omega_{j_{a'}m'}^{l_{a'}}\\iF_{a'}\Omega_{j_{a'}m'}^{l_{a'}'}\end{array}\right)\\
+\no=&\sum_{aa'}C_{a,\nu\pi m}^{\dag}C_{a',\nu'\pi'm'}\frac{1}{r_{a}^{2}}\left(\begin{array}{cc}iF_{a}\Omega_{j_{a}m}^{l_{a}'\dag} & G_{a}\Omega_{j_{a}m}^{l_{a}\dag}\end{array}\right)\left(\begin{array}{cc}0&\bmm{\sigma}\\-\bmm{\sigma}&0\end{array}\right)\cdot\bmm{Y}_{LM}^{L_{1}}\left(\begin{array}{c}G_{a'}\Omega_{j_{a'}m'}^{l_{a'}}\\iF_{a'}\Omega_{j_{a'}m'}^{l_{a'}'}\end{array}\right)\\
+\no=&\sum_{aa'}C_{a,\nu\pi m}^{\dag}C_{a',\nu'\pi'm'}\frac{1}{r_{a}^{2}}\left(\begin{array}{cc}-G_{a}\Omega_{j_{a}m}^{l_{a}\dag}\bmm{\sigma}&iF_{a}\Omega_{j_{a}m}^{l_{a}'\dag}\bmm{\sigma}\end{array}\right)\cdot\bmm{Y}_{LM}^{L_{1}}\left(\begin{array}{c}G_{a'}\Omega_{j_{a'}m'}^{l_{a'}}\\iF_{a'}\Omega_{j_{a'}m'}^{l_{a'}'}\end{array}\right)\\
+=&\sum_{aa'}C_{a,\nu\pi m}^{\dag}C_{a',\nu'\pi'm'}\frac{1}{r_{a}^{2}}\left[-G_{a}G_{a'}\Omega_{j_{a}m}^{l_{a}\dag}\bmm{\sigma}\cdot\bmm{Y}_{LM}^{L_{1}}\Omega_{j_{a'}m'}^{l_{a'}}-F_{a}F_{a'}\Omega_{j_{a}m}^{l_{a}'\dag}\bmm{\sigma}\cdot\bmm{Y}_{LM}^{L_{1}}\Omega_{j_{a'}m'}^{l_{a'}'}\right]
+\end{align}
+
+Use the relations:
+\begin{align}
+\bmm{\sigma}\cdot\bmm{Y}_{LM}^{L_{1}}(\hat{\bmm{r}})=\sum_{k'}\sigma_{k'}\bmm{e}^{k'}\sum_{\mu k}C_{L_{1}\mu1 k}^{LM}Y_{L_{1}\mu}\bmm{e}_{k}
+\end{align}
+and
+\begin{align}
+\bmm{e}^{\mu}\bmm{e}_{\nu}=\bmm{e}_{\mu}\bmm{e}_{\nu}^{*}=\delta_{\mu\nu}, \hspace{2em} \left(\mu\nu=\pm1,0\right)
+\end{align}
+So
+\begin{align}
+\bmm{\sigma}\cdot\bmm{Y}_{LM}^{L_{1}}=\sum_{\mu k}C_{L_{1}\mu1 k}^{LM}Y_{L_{1}\mu}\sigma_{1k}
+\end{align}
+
+For the wav function, we can see that:
+\begin{align}
+\no&G_{a}G_{a'}\Omega_{j_{a}m}^{l_{a}\dag}\bmm{\sigma}\cdot\bmm{Y}_{LM}^{L_{1}}\Omega_{j_{a'}m'}^{l_{a'}}\\
+\no=&G_{a}G_{a'}\Omega_{j_{a}m}^{l_{a}\dag}\sum_{\mu k}C_{L_{1}\mu1k}^{LM}Y_{L_{1}\mu}\sigma_{1k}\Omega_{j_{a'}m'}^{l_{a'}}\\
+\no=&G_{a}G_{a'}\sum_{\mu k}C_{L_{1}\mu1k}^{LM}\Omega_{j_{a}m}^{l_{a}\dag}Y_{L_{1}\mu}\sigma_{1k}\Omega_{j_{a'}m'}^{l_{a'}}\\
+=&G_{a}G_{a'}\left[\sum_{\mu k}C_{L_{1}\mu1 k}^{LM }Y_{L_{1}\mu}\sigma_{1k}\right]\Omega_{j_{a}m}^{l_{a}\dag}\Omega_{j_{a'}m'}^{l_{a'}}
+\end{align}
+
+
+\section{附录}
+\begin{align}
+\no&\left<a\mid\mathcal{T}_{LM}^{L_{1}}\mid b\right>=C_{j_{b}m_{b}LM}^{j_{a}m_{a}}\left<a \mid\mid \mathcal{T}_{LL_{1}}\mid\mid b\right>\\
+=&C_{j_{b}m_{b}LM}^{j_{a}m_{a}}(-1)^{j_{a}+L-\frac{1}{2}}\hat{j}_{b}\hat{L}^{-1}\frac{\kappa_{ab}+\beta_{LL_{1}}}{\sqrt{4\pi\left|\beta_{LL_{1}}\right|}}C_{j_{a}\frac{1}{2}j_{b}-\frac{1}{2}}^{L0}\\
+\end{align}
+Also we can write as:
+\begin{align}
+\no&\left<a\mid \mathcal{T}_{LM}^{L_{1}}\mid b\right>=\Omega_{j_{a}m_{a}}^{l_{a}\dag}\mathcal{T}_{LM}^{L_{1}}\Omega_{j_{b}m_{b}}^{l_{b}}\\
+=&\Omega_{j_{a}m_{a}}^{l_{a}\dag}\sum_{\mu k}C_{L_{1}\mu1 k}^{LM}Y_{L_{1}\mu}\sigma_{1k}\Omega_{j_{b}m_{b}}^{l_{b}}\\
+=&\sum_{\mu k}C_{L_{1}\mu 1k}^{LM}Y_{L_{1}\mu}\sigma_{1k}\sum_{\lambda}(-1)^{j_{a}+m_{a}+j_{b}+\lambda+\frac{1}{2}}\left\{\begin{array}{ccc}l_{a}&l_{b}&\lambda\\j_{b}&j_{a}&\frac{1}{2}\end{array}\right\}\frac{\hat{j}_{a}\hat{j}_{b}\hat{l}_{a}\hat{l}_{b}}{4\pi \hat{\lambda}}C_{l_{a}0l_{b}0}^{\lambda0}C_{j_{a}-m_{a}j_{b}m_{b}}^{\lambda M}Y_{\lambda M}
+\end{align}
+
+\begin{align}
+\no&\Omega_{J_{1}M_{1}}^{L_{1}\dag}\Omega_{J_{2}M_{2}}^{L_{2}}\\
+\no=&\sum_{m_{1}\sigma_{1}}C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}Y_{l_{1}m_{1}}^{*}\chi_{\frac{1}{2}\sigma_{1}}^{*}\sum_{m_{2}\sigma_{2}}C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}Y_{l_{2}m_{2}}\chi_{\frac{1}{2}\sigma_{2}}\\
+\no=&\sum_{m_{1}\sigma_{1}}\sum_{m_{2}\sigma_{2}}C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}Y_{l_{1}m_{1}}^{*}Y_{l_{2}m_{2}}\chi_{\frac{1}{2}\sigma_{1}}^{*}\chi_{\frac{1}{2}\sigma_{2}}\\
+\no=&\sum_{m_{1}m_{2}}\sum_{\sigma}C_{l_{1}m_{1}\frac{1}{2}\sigma}^{J_{1}M_{1}}C_{l_{2}m_{2}\frac{1}{2}\sigma}^{J_{2}M_{2}}(-1)^{m_{1}}Y_{l_{1}-m_{1}}Y_{l_{2}m_{2}}\\
+\no=&\sum_{m_{1}m_{2}}\sum_{\sigma}C_{l_{1}m_{1}\frac{1}{2}\sigma}^{J_{1}M_{1}}C_{l_{2}m_{2}\frac{1}{2}\sigma}^{J_{2}M_{2}}(-1)^{m_{1}}\sum_{LM}\frac{\hat{l}_{1}\hat{l}_{2}}{4\pi \hat{L}}C_{l_{1}0l_{2}0}^{L0}C_{l_{1}-m_{1}l_{2}m_{2}}^{LM}Y_{LM}\\
+\no=&\sum_{m_{1}m_{2}}\sum_{\sigma}\sum_{LM}(-1)^{m_{1}}C_{l_{1}m_{1}\frac{1}{2}\sigma}^{J_{1}M_{1}}C_{l_{2}m_{2}\frac{1}{2}\sigma}^{J_{2}M_{2}}\frac{\hat{l}_{1}\hat{l}_{2}}{4\pi \hat{L}}C_{l_{1}0l_{2}0}^{L0}(-1)^{l_{1}+l_{2}-L}C_{l_{2}m_{2}l_{1}-m_{1}}^{LM}Y_{LM}\\
+\no=&\sum_{LM}(-1)^{l_{1}+l_{1}+l_{2}-L}\frac{\hat{l}_{1}\hat{l}_{2}}{4\pi\hat{L}}C_{l_{1}0l_{2}0}^{L0}\sum_{m_{1}m_{2}\sigma}(-1)^{l_{1}-m_{1}}C_{l_{1}m_{1}\frac{1}{2}\sigma}^{J_{1}M_{1}}C_{l_{2}m_{2}\frac{1}{2}\sigma}^{J_{2}M_{2}}C_{l_{2}m_{2}l_{1}-m_{1}}^{LM}Y_{LM}\\
+\no=&\sum_{LM}(-1)^{2l_{1}+l_{2}-L}\frac{\hat{l}_{1}\hat{l}_{2}}{4\pi\hat{L}}C_{l_{1}0l_{2}0}^{L0}(-1)^{\frac{1}{2}+J_{1}+l_{2}+L}\prod_{J_{1}L}C_{J_{1}M_{1}LM}^{J_{2}M_{2}}\left\{\begin{array}{ccc}l_{1}&\frac{1}{2}&J_{1}\\J_{2}&L&l_{2}\end{array}\right\}Y_{LM}\\
+\no=&\sum_{LM}(-1)^{\frac{1}{2}+J_{1}}\frac{\hat{l}_{1}\hat{l}_{2}\hat{J}_{1}\hat{L}}{4\pi\hat{L}}C_{l_{1}0l_{2}0}^{L0}(-1)^{J_{1}-M_{1}}\frac{\hat{J}_{2}}{\hat{L}}C_{J_{1}M_{1}J_{2}-M_{2}}^{L-M}\left\{\begin{array}{ccc}l_{1}&l_{2}&L\\J_{2}&J_{1}&\frac{1}{2}\end{array}\right\}Y_{LM}\\
+\no=&\sum_{LM}(-1)^{\frac{1}{2}+2J_{1}-M_{1}+J_{1}+J_{2}-L}\left\{\begin{array}{ccc}l_{1}&l_{2}&L\\ J_{2}&J_{1}&\frac{1}{2}\end{array}\right\}\frac{\hat{J}_{1}\hat{J}_{2}\hat{l}_{1}\hat{l}_{2}}{4\pi \hat{L}}C_{l_{1}0l_{2}0}^{L0}C_{J_{1}-M_{1}J_{2}M_{2}}^{LM}Y_{LM}\\
+=&\sum_{LM}(-1)^{J_{1}+M_{1}+J_{2}+L+\frac{1}{2}}\left\{\begin{array}{ccc}l_{1}&l_{2}&L\\ J_{2}&J_{1}&\frac{1}{2}\end{array}\right\}\frac{\hat{J}_{1}\hat{J}_{2}\hat{l}_{1}\hat{l}_{2}}{4\pi \hat{L}}C_{l_{1}0l_{2}0}^{L0}C_{J_{1}-M_{1}J_{2}M_{2}}^{LM}Y_{LM}
+\end{align}
+
+{\red the sum of M is necessary?}
+
+The orthonormality condition for the basis functions is:
+\begin{align}
+\chi_{Sm}^{\dag}\chi_{Sm'}=\delta_{mm'}
+\end{align}
+
+The complex conjugate function $Y_{lm}^{*}$
+\begin{align}
+Y_{lm}^{*}(\vartheta,\varphi)=Y_{lm}(\vartheta,-\varphi)=(-1)^{m}Y_{l-m}(\vartheta,\varphi)
+\end{align}
+and a direct product of two spherical harmonics of the same arguments can expanded in series as:
+\begin{align}
+Y_{l_{1}m_{1}}(\vartheta,\varphi)Y_{l_{2}m_{2}}(\vartheta,\varphi)=\sum_{LM}\sqrt{\frac{(2l_{1}+1)(2l_{2}+1)}{4\pi(2L+1)}}C_{l_{1}0l_{2}0}^{L0}C_{l_{1}m_{1}l_{2}m_{2}}^{LM}Y_{LM}
+\end{align}
+
+The symmetry properties of the Clebsch-Gordan Coefficients:
+\begin{align}
+C_{a\alpha b\beta}^{c\gamma}=(-1)^{a+b-c}C_{b\beta a-\alpha}C_{b\beta a-\alpha}^{c\gamma}=(-1)^{a-\alpha}\sqrt{\frac{2c+1}{2b+1}}C_{a\alpha c-\gamma}^{b-\beta}
+\end{align}
+
+The sums involving products of three CG coefficients:
+\begin{align}
+\sum_{\alpha\beta\delta}(-1)^{a-\alpha}C_{a\alpha b\beta}^{c\gamma}C_{d\delta b\beta}^{e\varepsilon}C_{d\delta a-\alpha}^{f\varphi}=\kappa_{1}\prod_{cf}C_{c\gamma f\varphi}^{e\varepsilon}\left\{\begin{array}{ccc}a&b&c\\ e&f&d\end{array}\right\}
+\end{align}
+and
+\begin{align}
+&\kappa_{1}=(-1)^{b+c+d+f}
+&\prod_{abc\cdots}=\left[(2a+1)(2b+1)(2c+1)\cdots\right]^{\frac{1}{2}}
+\end{align}
+
+\begin{align}
+\no&\Omega_{J_{1}M_{1}}^{L_{1}\dag}\hat{\bmm{S}}\Omega_{J_{2}M_{2}}^{L_{2}}\\
+\no=&\sum_{m_{1}\sigma_{1}}C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}Y_{l_{1}m_{1}}^{*}\chi_{\frac{1}{2}\sigma_{1}}^{\dag}\hat{\bmm{S}}\sum_{m_{2}\sigma_{2}}C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}Y_{l_{2}m_{2}}\chi_{\frac{1}{2}\sigma_{2}}\\
+\no=&\sum_{m_{1}\sigma_{1}}\sum_{m_{2}\sigma_{2}}C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}Y_{l_{1}m_{1}}^{*}Y_{l_{2}m_{2}}\chi_{\frac{1}{2}\sigma_{1}}^{\dag}\hat{\bmm{S}}\chi_{\frac{1}{2}\sigma_{2}}\\
+\no=&\sum_{m_{1}\sigma_{1}}\sum_{m_{2}\sigma_{2}}C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}(-1)^{m_{1}}\sum_{LM}\frac{\hat{l}_{1}\hat{l}_{2}}{\sqrt{4\pi} \hat{L}}C_{l_{1}0l_{2}0}^{L0}C_{l_{1}-m_{1}l_{2}m_{2}}^{LM}Y_{LM}\sum_{\mu}\frac{\sqrt{3}}{2}C_{\frac{1}{2}\sigma_{2}1\mu}^{\frac{1}{2}\sigma_{1}}\bmm{e}_{1\mu}\\
+\no=&\sum_{m_{1}\sigma_{1}}\sum_{m_{2}\sigma_{2}}\sum_{LM\mu}(-1)^{l_{1}-m_{1}}\frac{\hat{J}_{1}}{\sqrt{2}}C_{J_{1}M_{1}l_{1}-m_{1}}^{\frac{1}{2}\sigma_{1}}(-1)^{l_{2}-m_{2}}\frac{\hat{J}_{2}}{\sqrt{2}}C_{J_{2}M_{2}l_{2}-m_{2}}^{\frac{1}{2}\sigma_{2}}(-1)^{l_{1}+l_{2}-L}C_{l_{2}m_{2}l_{1}-m_{1}}^{LM}(-1)^{\frac{1}{2}-\sigma_{2}}\sqrt{\frac{2}{3}}C_{\frac{1}{2}\sigma_{1}\frac{1}{2}-\sigma_{2}}^{1\mu}\\
+\no&\times(-1)^{m_{1}}\frac{\hat{l}_{1}\hat{l}_{2}}{\sqrt{4\pi}\hat{L}}C_{l_{1}0l_{2}0}^{L0}Y_{LM}\frac{\sqrt{3}}{2}\bmm{e}_{1\mu}\\
+\no=&\sum_{m_{1}\sigma_{1}}\sum_{m_{2}\sigma_{2}}\sum_{LM\mu}(-1)^{L-m_{2}+\frac{1}{2}-\sigma_{2}}\frac{\hat{J}_{1}\hat{J}_{2}}{2}C_{J_{1}M_{1}l_{1}-m_{1}}^{\frac{1}{2}\sigma_{1}}(-1)^{J_{2}-M_{2}}\frac{\sqrt{2}}{\hat{l}_{2}}C_{J_{2}M_{2}\frac{1}{2}-\sigma_{2}}^{l_{2}m_{2}}C_{l_{2}m_{2}l_{1}-m_{1}}^{LM}C_{\frac{1}{2}\sigma_{1}\frac{1}{2}-\sigma_{2}}^{1\mu}\frac{\hat{l}_{1}\hat{l}_{2}}{\sqrt{4\pi}\hat{L}}C_{l_{1}0l_{2}0}^{L0}Y_{LM}\frac{1}{\sqrt{2}}\bmm{e}_{1\mu}\\
+\no=&\sum_{m_{1}\sigma_{1}}\sum_{m_{2}\sigma_{2}}\sum_{LM\mu}(-1)^{l_{1}+\mu+J_{2}-M_{2}}(-1)^{\frac{1}{2}-\sigma_{1}+l_{2}-m_{2}}\frac{\hat{J}_{1}\hat{J}_{2}}{2}C_{J_{1}M_{1}l_{1}-m_{1}}^{\frac{1}{2}\sigma_{1}}\frac{\sqrt{2}}{\hat{l}_{2}}C_{J_{2}M_{2}\frac{1}{2}-\sigma_{2}}^{l_{2}m_{2}}C_{l_{2}m_{2}l_{1}-m_{1}}^{LM}C_{\frac{1}{2}\sigma_{1}\frac{1}{2}-\sigma_{2}}^{1\mu}\\
+\no&\times\frac{\hat{l}_{1}\hat{l}_{2}}{\sqrt{4\pi}\hat{L}}C_{l_{1}0l_{2}0}^{L0}Y_{LM}\frac{1}{\sqrt{2}}\bmm{e}_{1\mu}\\
+\no=&\sum_{LM\mu}(-1)^{l_{1}+\mu+J_{2}-M_{2}}\frac{\hat{J}_{1}\hat{J}_{2}\hat{l}_{1}}{\sqrt{16\pi}\hat{L}}(-1)^{J_{1}+J_{2}-M_{1}-M_{2}}\sqrt{2}\hat{l}_{2}\hat{L}\sqrt{3}\sum_{J\xi}C_{LM1-\mu}^{J\xi}C_{J_{2}M_{2}J_{1}-M_{1}}^{J\xi}\left\{\begin{array}{ccc}\frac{1}{2}&l_{1}&J_{1}\\ \frac{1}{2}&l_{2}&J_{2}\\1&L&J\end{array}\right\}C_{l_{1}0l_{2}0}^{L0}Y_{LM}\bmm{e}_{1\mu}\\
+\no=&\sum_{L}(-1)^{l_{1}+J_{1}-M_{1}}\frac{\sqrt{3}\hat{j}_{1}\hat{j}_{2}\hat{l}_{1}\hat{l}_{2}}{\sqrt{8\pi}}\sum_{J}C_{J_{2}M_{2}J_{1}-M_{1}}^{J\xi}\left\{\begin{array}{ccc}\frac{1}{2}&l_{1}&J_{1}\\ \frac{1}{2}&l_{2}&J_{2}\\ 1&L&J\end{array}\right\}C_{l_{1}0l_{2}0}^{L0}\sum_{M\mu}(-1)^{\mu}C_{LM1-\mu}^{J\xi}Y_{LM}\bmm{e}_{1\mu}\\
+\no=&\sum_{JL}(-1)^{l_{1}+J_{1}-M_{1}}\frac{\sqrt{3(2j_{1}+1)(2j_{2}+1)(2l_{1}+1)(2l_{2}+2)}}{\sqrt{8\pi}}\left\{\begin{array}{ccc}l_{1}&J_{1}&\frac{1}{2}\\l_{2}&J_{2}&\frac{1}{2}\\L&J&1\end{array}\right\}\\
+\no&\times (-1)^{J_{1}+J_{2}-J}C_{J_{1}-M_{1}J_{2}M_{2}}^{J\xi}C_{l_{1}0l_{2}0}^{L0}\bmm{Y}_{J\xi}^{L}\\
+\no=&(-1)^{J_{2}+l_{1}-M_{1}+1}\frac{\sqrt{3(2j_{1}+1)(2j_{2}+1)(2l_{1}+1)(2l_{2}+2)}}{\sqrt{8\pi}}\sum_{JL}(-1)^{J}C _{l_{1}0l_{2}0}^{L0}\left\{\begin{array}{ccc}l_{1}&J_{1}&\frac{1}{2}\\l_{2}&J_{2}&\frac{1}{2}\\L&J&1\end{array}\right\}C_{J_{1}-M_{1}J_{2}M_{2}}^{J\xi}\bmm{Y}_{J\xi}^{L}\\
+=&(-1)^{J_{2}+l_{1}+M_{1}}\frac{\sqrt{3(2j_{1}+1)(2j_{2}+1)(2l_{1}+1)(2l_{2}+2)}}{\sqrt{8\pi}}\sum_{JL}(-1)^{J}C _{l_{1}0l_{2}0}^{L0}\left\{\begin{array}{ccc}l_{1}&J_{1}&\frac{1}{2}\\l_{2}&J_{2}&\frac{1}{2}\\L&J&1\end{array}\right\}C_{J_{1}-M_{1}J_{2}M_{2}}^{J\xi}\bmm{Y}_{J\xi}^{L}
+\end{align}
+
+\begin{align}
+\no&\Omega_{J_{1}M_{1}}^{L_{1}\dag}\bmm{\sigma}\cdot\bmm{Y}_{LM}^{L_{1}}\Omega_{J_{2}M_{2}}^{L_{2}}\\
+\no=&\sum_{m_{1}\sigma_{1}}C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}Y_{l_{1}m_{1}}^{*}\chi_{\frac{1}{2}\sigma_{1}}^{\dag}\sum_{\mu k}C_{L_{1}\mu1 k}^{LM}Y_{L_{1}\mu}\sigma_{1k}\sum_{m_{2}\sigma_{2}}C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}Y_{l_{2}m_{2}}\chi_{\frac{1}{2}\sigma_{2}}\\
+\no=&\sum_{m_{1}\sigma_{1}m_{2}\sigma_{2}}\sum_{\mu k}C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}C_{L_{1}\mu1k}^{LM}Y_{l_{1}m_{1}}^{*}Y_{L_{1}\mu}Y_{l_{2}m_{2}}\chi_{\frac{1}{2}\sigma_{1}}^{\dag}\sigma_{1k}\chi_{\frac{1}{2}\sigma_{2}}\\
+\no=&\sum_{m_{1}\sigma_{1}m_{2}\sigma_{2}}\sum_{\mu k}C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}C_{L_{1}\mu1k}^{LM}(-1)^{m_{1}}\sum_{\lambda\xi\lambda'\xi'}\frac{\hat{l}_{1}\hat{L_{1}}\hat{l}_{2}}{4\pi\hat{\lambda}}C_{l_{1}0L_{1}0}^{\lambda'0}C_{\lambda'0l_{2}0}^{\lambda0}C_{l_{1}-m_{1}L_{1}\mu}^{\lambda'\xi'}C_{\lambda'\xi'l_{2}m_{2}}^{\lambda\xi}Y_{\lambda\xi}\frac{\sqrt{3}}{2}C_{\frac{1}{2}\sigma_{2}1k}^{\frac{1}{2}\sigma_{1}}
+\end{align}
+
+
+\begin{align}
+C_{p\psi a\alpha}^{q\kappa}C_{q\kappa u\nu}^{r\rho}C_{r\rho c\gamma}^{s\sigma}C_{s\sigma v\mu}^{p\psi}C_{u-\nu b\beta}^{t\tau}C_{t\tau d\delta}^{v\mu}
+\end{align}
+
+$a\alpha,b\beta,c\gamma,d\delta$ 是外线。
+
+先决定$C_{u-\mu b\beta}^{t\tau}C_{t\tau d\delta}^{v \mu}$
+\begin{align}
+C_{\lambda'\xi'l_{2}m_{2}}^{\lambda\xi}=(-1)^{\lambda'-\xi'}\frac{\hat{\lambda}}{\hat{\l}_{2}}C_{\lambda'\xi'\lambda-\xi}^{l_{2}-m_{2}}\rightarrow {\red C_{u-\nu b\beta}^{t\tau}}
+\end{align}
+即：
+\begin{align}
+(-1)^{\lambda'-\xi'}\frac{\hat{\lambda}}{\hat{l}_{2}}\hat{l}_{2}(-1)^{m_{2}+3\lambda'+\lambda}\left(\begin{array}{ccc}\lambda'&\lambda&l_{2}\\ \xi'&-\xi&m_{2}\end{array}\right)=(-1)^{m_{2}+\lambda-\xi'}\hat{\lambda}\left(\begin{array}{ccc}\lambda'&\lambda&l_{2}\\ \xi'&-\xi&m_{2}\end{array}\right)
+\end{align}
+
+
+则$t\tau$对应$l_{2}-m_{2}$
+\begin{align}
+C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}=(-1)^{l_{2}-m_{2}}\frac{\hat{J}_{2}}{\hat{\frac{1}{2}}}C_{l_{2}m_{2}J_{2}-M_{2}}^{\frac{1}{2}-\sigma_{2}}=(-1)^{l_{2}-m_{2}+l_{2}+J_{2}-\frac{1}{2}}\frac{\hat{J}_{2}}{\hat{\frac{1}{2}}}C_{l_{2}-m_{2}J_{2}M_{2}}^{\frac{1}{2}\sigma_{2}}=(-1)^{J_{2}-m_{2}-\frac{1}{2}}\frac{\hat{J}_{2}}{\sqrt{2}}C_{l_{2}-m_{2}J_{2}M_{2}}^{\frac{1}{2}\sigma_{2}}\rightarrow{\red C_{t\tau d\delta}^{v\mu}}
+\end{align}
+即：
+\begin{align}
+(-1)^{J_{2}-m_{2}-\frac{1}{2}}\frac{\hat{J}_{2}}{\hat{\frac{1}{2}}}\hat{\frac{1}{2}}(-1)^{-\sigma_{2}+3l_{2}+J_{2}}\left(\begin{array}{ccc}l_{2}&J_{2}&\frac{1}{2}\\-m_{2}&M_{2}&-\sigma_{2}\end{array}\right)= (-1)^{l_{2}-M_{2}}\hat{J}_{2}\left(\begin{array}{ccc}l_{2}&J_{2}&\frac{1}{2}\\-m_{2}&M_{2}&-\sigma_{2}\end{array}\right)
+\end{align}
+
+然后是四个CG系数求和和两条外线
+\begin{align}
+C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}=(-1)^{\frac{1}{2}+\sigma_{1}}\frac{\hat{J}_{1}}{\hat{l}_{1}}C_{\frac{1}{2}-\sigma_{1}J_{1}M_{1}}^{l_{1}m_{1}}=(-1)^{\frac{1}{2}+\sigma_{1}}\frac{\hat{J}_{1}}{\hat{l}_{1}}C_{\frac{1}{2}-\sigma_{1}J_{1}M_{1}}^{l_{1}m_{1}}=(-1)^{1+\sigma_{1}+J_{1}-l_{1}}\frac{\hat{J}_{1}}{\hat{l}_{1}}C_{\frac{1}{2}\sigma_{1}J_{1}-M_{1}}^{l_{1}-m_{1}}\rightarrow{\red C_{p\psi a\alpha}^{q\kappa}}
+\end{align}
+即：
+\begin{align}
+(-1)^{1+\sigma_{1}+J_{1}-l_{1}}\frac{\hat{J}_{1}}{\hat{l}_{1}}\hat{l}_{1}(-1)^{m_{1}+\frac{3}{2}+J_{1}}\left(\begin{array}{ccc}\frac{1}{2}&J_{1}&l_{1}\\ \sigma_{1}&-M_{1}&m_{1}\end{array}\right)=
+\end{align}
+
+\begin{align}
+C_{l_{1}-m_{1}L_{1}\mu}^{\lambda'\xi'}=(-1)^{l_{1}+m_{1}}\frac{\hat{\lambda'}}{\hat{L}_{1}}C_{l_{1}-m_{1}\lambda'-\xi'}^{L_{1}-\mu}\rightarrow{\red C_{q\kappa u\nu}^{r\rho}}
+\end{align}
+即：
+\begin{align}
+(-1)^{l_{1}+m_{1}}\frac{\hat{\lambda'}}{\hat{L}_{1}}\hat{L}_{1}(-1)^{\mu+3l_{1}+\lambda'}\left(\begin{array}{ccc}l_{1}&\lambda'&L_{1}\\-m_{1}&-\xi'&\mu\end{array}\right)
+\end{align}
+
+\begin{align}
+C_{L_{1}\mu 1k}^{LM}=(-1)^{L_{1}-\mu}\frac{\hat{L}}{\hat{1}}C_{L_{1}\mu L-M}^{1-k}=(-1)^{L_{1}-\mu+L_{1}+L-1}\frac{\hat{L}}{\hat{1}}C_{L_{1}-\mu LM}^{1k}=(-1)^{L-\mu-1}\frac{\hat{L}}{\hat{1}}C_{L_{1}-\mu LM}^{1k}\rightarrow{\red C_{r\rho c\gamma}^{s\sigma}}
+\end{align}
+即：
+\begin{align}
+(-1)^{L-\mu-1}\frac{\hat{L}}{\hat{1}}\hat{1}(-1)^{k+3L_{1}+L}\left(\begin{array}{ccc}L_{1}&L&1\\-\mu&M&-k\end{array}\right)
+\end{align}
+
+\begin{align}
+C_{\frac{1}{2}\sigma_{2}1k}^{\frac{1}{2}\sigma_{1}}=(-1)^{\frac{1}{2}+1-\frac{1}{2}}C_{1k\frac{1}{2}\sigma_{2}}^{\frac{1}{2}\sigma_{1}}\rightarrow{\red C_{s\sigma v\mu}^{p\psi}}
+\end{align}
+即：
+\begin{align}
+(-1)^{1}\hat{\frac{1}{2}}(-1)^{\sigma_{1}+3+\frac{1}{2}}\left(\begin{array}{ccc}1&\frac{1}{2}&\frac{1}{2}\\k&\sigma_{2}&-\sigma_{1}\end{array}\right)
+\end{align}
+
+用3J符号表示出来：
+
+所以：
+\begin{align}
+\no&\sum_{m_{1}\sigma_{1}m_{2}\sigma_{2}}\sum_{\mu k\xi'}C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}C_{L_{1}\mu1k}^{LM}(-1)^{m_{1}}C_{l_{1}-m_{1}L_{1}\mu}^{\lambda'\xi'}C_{\lambda'\xi'l_{2}m_{2}}^{\lambda\xi}C_{\frac{1}{2}\sigma_{2}1k}^{\frac{1}{2}\sigma_{1}}\\
+\no=&(-1)^{m_{1}}(-1)^{\lambda'-\xi'+J_{2}-m_{2}-\frac{1}{2}+1+\sigma_{1}+J_{1}-l_{1}+l_{1}+m_{1}+L-\mu-1+1}\frac{\hat{\lambda}\hat{J}_{2}\hat{J}_{1}\hat{\lambda'}\hat{L}}{\hat{l}_{2}\hat{\frac{1}{2}}\hat{l}_{1}\hat{L}_{1}\hat{1}}\\
+\no&\times C_{\frac{1}{2}\sigma_{1}J_{1}-M_{1}}^{l_{1}-m_{1}}C_{l_{1}-m_{1}\lambda'-\xi'}^{L_{1}-\mu}C_{L_{1}-\mu LM}^{1k}C_{1k\frac{1}{2}\sigma_{2}}^{\frac{1}{2}\sigma_{1}}C_{\lambda'\xi'\lambda-\xi}^{l_{2}-m_{2}}C_{l_{2}-m_{2}J_{2}M_{2}}^{\frac{1}{2}\sigma_{2}}\\
+=&(-1)^{\lambda'\xi+J_{2}-\frac{1}{2}+\sigma_{1}+J_{1}+L-\mu}\frac{\hat{\lambda}\hat{J}_{2}\hat{J}_{1}\hat{\lambda'}\hat{L}}{\hat{l}_{2}\hat{\frac{1}{2}}\hat{l}_{1}\hat{L}_{1}\hat{1}} C_{\frac{1}{2}\sigma_{1}J_{1}-M_{1}}^{l_{1}-m_{1}}C_{l_{1}-m_{1}\lambda'-\xi'}^{L_{1}-\mu}C_{L_{1}-\mu LM}^{1k}C_{1k\frac{1}{2}\sigma_{2}}^{\frac{1}{2}\sigma_{1}}C_{\lambda'\xi'\lambda-\xi}^{l_{2}-m_{2}}C_{l_{2}-m_{2}J_{2}M_{2}}^{\frac{1}{2}\sigma_{2}}
+\end{align}
+
+=======================================================================================================================
+
+\begin{align}
+C_{p\psi a\alpha}^{q\kappa}C_{q\kappa u\nu}^{g_{\lambda}} C_{g\lambda v\mu}^{s\sigma}C_{s\sigma d\delta}^{p\psi} C_{u-\nu b\beta}^{r-\rho} C_{r-\rho c\gamma}^{v\mu}
+\end{align}
+
+
+\begin{align}
+&C_{\lambda'\xi' l_{2}m_{2}}^{\lambda\xi}\rightarrow C_{\lambda'-\xi'\lambda-\xi}^{l_{2}-m_{2}}\rightarrow{\red C_{u-\nu b\beta}^{r-\rho}}\\
+&C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}\rightarrow C_{l_{2}-m_{2}J_{2}M_{2}}^{\frac{1}{2}\sigma_{2}}\rightarrow{\red C_{r-\rho c\gamma}^{v\mu}}\\
+&C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}\rightarrow C_{l_{1}m_{1}J_{1}-M_{1}}^{\frac{1}{2}-\sigma_{1}}\rightarrow{\red C_{p\psi a\alpha}^{q\kappa}}\\
+&C_{\frac{1}{2}\sigma_{1}1k}^{\frac{1}{2}\sigma_{2}}\rightarrow C_{\frac{1}{2}-\sigma_{1}\frac{1}{2}\sigma_{2}}^{1k}\rightarrow{\red C_{q\kappa u\nu}^{g\lambda}}\\
+&\rightarrow{\red C_{g\lambda v\mu}^{s\sigma}}\\
+&C_{L_{1}\mu 1k}^{LM}\rightarrow{\red C_{s\sigma d\delta}^{p\psi}}
+\end{align}
+
+%\begin{align}
+%\bmm{\sigma}\cdot\bmm{Y}_{LM}^{L_{1}}=\sum_{\mu k}C_{L_{1}\mu1 k}^{LM}Y_{L_{1}\mu}\sigma_{1k}
+%\end{align}
+
+\clearpage
+\end{CJK*}
+\end{document}
