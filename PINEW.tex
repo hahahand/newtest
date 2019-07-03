@@ -1,6 +1,6 @@
 \documentclass[a4paper]{article}
-\usepackage{CJK}
-\usepackage{geometry}% ¸Ä±äÒ³¼ä¾àµÄºê°ü
+\usepackage{ctex}
+\usepackage{geometry}% æ”¹å˜é¡µé—´è·çš„å®åŒ…
 \usepackage{indentfirst}
 \usepackage{mathrsfs}
 \usepackage{amsmath}
@@ -9,14 +9,14 @@
 \usepackage{mathrsfs}
 \usepackage{color}
 \usepackage{latexsym}
-\usepackage[CJKbookmarks]{hyperref} %³¬Á´½Ó
-\usepackage{type1cm} %¸Ä±ä×ÖÌå
-\usepackage{amsmath}%×Ô¶¯»»Ò³
+\usepackage[CJKbookmarks]{hyperref} %è¶…é“¾æ¥
+\usepackage{type1cm} %æ”¹å˜å­—ä½“
+\usepackage{amsmath}%è‡ªåŠ¨æ¢é¡µ
 \allowdisplaybreaks[4]
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{multirow}
-\usepackage{lscape}  %ºáÖÃ
+\usepackage{lscape}  %æ¨ªç½®
 
 
 
@@ -42,10 +42,10 @@
 
 \geometry{left=1.0cm,right=1.0cm,top=2.0cm,bottom=2.0cm}
 \begin{document}
-\begin{CJK*}{GBK}{song}
-\renewcommand\figurename{Í¼}%Í¼ÖĞ½«figure¸ÄÎªÍ¼
-\renewcommand\tablename{±í}
-\pagenumbering{arabic}%¼ÓÒ³Âë
+% \begin{CJK*}{GBK}{song}
+\renewcommand\figurename{å›¾}%å›¾ä¸­å°†figureæ”¹ä¸ºå›¾
+\renewcommand\tablename{è¡¨}
+\pagenumbering{arabic}%åŠ é¡µç 
 \fontsize{12pt}{18pt}
 \selectfont
 \title{deform nuclei $\pi$ -meson derivation}
@@ -95,7 +95,7 @@ Use this marking method, the $\pi$ -meson nuclear coupling energy functional can
 \no=&\frac{1}{2}\sum_{\alpha\beta}\left(2-\delta_{q_{\alpha}q_{\beta}}\right)\int d\bmm{r}_{a}d\bmm{r}_{b}\sum_{LM}\sum_{L_{1}L_{2}}^{L\pm1}C_{L010}^{L_{1}0}C_{L010}^{L_{2}0}\mathcal{V}_{L}^{L_{1}L_{2}}(m_{\pi};r_{a},r_{b})\\
 \no&\left[f_{\pi}\bar{\psi}_{\nu\pi m}\gamma_{5}\bmm{\gamma}\cdot\bmm{Y}_{LM}^{L_{1}}\psi_{\nu'\pi'm'}\right]_{\bmm{r}_{a}}\cdot\left[f_{\pi}\bar{\psi}_{\nu'\pi'm'}\gamma_{5}\bmm{\gamma}\cdot\bmm{Y}_{LM}^{L_{2}*}\psi_{\nu\pi m}\right]_{\bmm{r}_{b}}
 \end{align}
-According to ¡¶Quantum theory of angular momentum¡· P.64
+According to ã€ŠQuantum theory of angular momentumã€‹ P.64
 \begin{align}
 \left(\mathscr{M}_{J}\cdot\mathscr{N}_{J}\right)=\sum_{M}\mathscr{M}_{JM}\mathscr{N}_{JM}^{*}
 \end{align}
@@ -149,7 +149,7 @@ For the wav function, we can see that:
 \end{align}
 
 
-\section{¸½Â¼}
+\section{é™„å½•}
 \begin{align}
 \no&\left<a\mid\mathcal{T}_{LM}^{L_{1}}\mid b\right>=C_{j_{b}m_{b}LM}^{j_{a}m_{a}}\left<a \mid\mid \mathcal{T}_{LL_{1}}\mid\mid b\right>\\
 =&C_{j_{b}m_{b}LM}^{j_{a}m_{a}}(-1)^{j_{a}+L-\frac{1}{2}}\hat{j}_{b}\hat{L}^{-1}\frac{\kappa_{ab}+\beta_{LL_{1}}}{\sqrt{4\pi\left|\beta_{LL_{1}}\right|}}C_{j_{a}\frac{1}{2}j_{b}-\frac{1}{2}}^{L0}\\
@@ -236,32 +236,32 @@ and
 C_{p\psi a\alpha}^{q\kappa}C_{q\kappa u\nu}^{r\rho}C_{r\rho c\gamma}^{s\sigma}C_{s\sigma v\mu}^{p\psi}C_{u-\nu b\beta}^{t\tau}C_{t\tau d\delta}^{v\mu}
 \end{align}
 
-$a\alpha,b\beta,c\gamma,d\delta$ ÊÇÍâÏß¡£
+$a\alpha,b\beta,c\gamma,d\delta$ æ˜¯å¤–çº¿ã€‚
 
-ÏÈ¾ö¶¨$C_{u-\mu b\beta}^{t\tau}C_{t\tau d\delta}^{v \mu}$
+å…ˆå†³å®š$C_{u-\mu b\beta}^{t\tau}C_{t\tau d\delta}^{v \mu}$
 \begin{align}
 C_{\lambda'\xi'l_{2}m_{2}}^{\lambda\xi}=(-1)^{\lambda'-\xi'}\frac{\hat{\lambda}}{\hat{\l}_{2}}C_{\lambda'\xi'\lambda-\xi}^{l_{2}-m_{2}}\rightarrow {\red C_{u-\nu b\beta}^{t\tau}}
 \end{align}
-¼´£º
+å³ï¼š
 \begin{align}
 (-1)^{\lambda'-\xi'}\frac{\hat{\lambda}}{\hat{l}_{2}}\hat{l}_{2}(-1)^{m_{2}+3\lambda'+\lambda}\left(\begin{array}{ccc}\lambda'&\lambda&l_{2}\\ \xi'&-\xi&m_{2}\end{array}\right)=(-1)^{m_{2}+\lambda-\xi'}\hat{\lambda}\left(\begin{array}{ccc}\lambda'&\lambda&l_{2}\\ \xi'&-\xi&m_{2}\end{array}\right)
 \end{align}
 
 
-Ôò$t\tau$¶ÔÓ¦$l_{2}-m_{2}$
+åˆ™$t\tau$å¯¹åº”$l_{2}-m_{2}$
 \begin{align}
 C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}=(-1)^{l_{2}-m_{2}}\frac{\hat{J}_{2}}{\hat{\frac{1}{2}}}C_{l_{2}m_{2}J_{2}-M_{2}}^{\frac{1}{2}-\sigma_{2}}=(-1)^{l_{2}-m_{2}+l_{2}+J_{2}-\frac{1}{2}}\frac{\hat{J}_{2}}{\hat{\frac{1}{2}}}C_{l_{2}-m_{2}J_{2}M_{2}}^{\frac{1}{2}\sigma_{2}}=(-1)^{J_{2}-m_{2}-\frac{1}{2}}\frac{\hat{J}_{2}}{\sqrt{2}}C_{l_{2}-m_{2}J_{2}M_{2}}^{\frac{1}{2}\sigma_{2}}\rightarrow{\red C_{t\tau d\delta}^{v\mu}}
 \end{align}
-¼´£º
+å³ï¼š
 \begin{align}
 (-1)^{J_{2}-m_{2}-\frac{1}{2}}\frac{\hat{J}_{2}}{\hat{\frac{1}{2}}}\hat{\frac{1}{2}}(-1)^{-\sigma_{2}+3l_{2}+J_{2}}\left(\begin{array}{ccc}l_{2}&J_{2}&\frac{1}{2}\\-m_{2}&M_{2}&-\sigma_{2}\end{array}\right)= (-1)^{l_{2}-M_{2}}\hat{J}_{2}\left(\begin{array}{ccc}l_{2}&J_{2}&\frac{1}{2}\\-m_{2}&M_{2}&-\sigma_{2}\end{array}\right)
 \end{align}
 
-È»ºóÊÇËÄ¸öCGÏµÊıÇóºÍºÍÁ½ÌõÍâÏß
+ç„¶åæ˜¯å››ä¸ªCGç³»æ•°æ±‚å’Œå’Œä¸¤æ¡å¤–çº¿
 \begin{align}
 C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}=(-1)^{\frac{1}{2}+\sigma_{1}}\frac{\hat{J}_{1}}{\hat{l}_{1}}C_{\frac{1}{2}-\sigma_{1}J_{1}M_{1}}^{l_{1}m_{1}}=(-1)^{\frac{1}{2}+\sigma_{1}}\frac{\hat{J}_{1}}{\hat{l}_{1}}C_{\frac{1}{2}-\sigma_{1}J_{1}M_{1}}^{l_{1}m_{1}}=(-1)^{1+\sigma_{1}+J_{1}-l_{1}}\frac{\hat{J}_{1}}{\hat{l}_{1}}C_{\frac{1}{2}\sigma_{1}J_{1}-M_{1}}^{l_{1}-m_{1}}\rightarrow{\red C_{p\psi a\alpha}^{q\kappa}}
 \end{align}
-¼´£º
+å³ï¼š
 \begin{align}
 (-1)^{1+\sigma_{1}+J_{1}-l_{1}}\frac{\hat{J}_{1}}{\hat{l}_{1}}\hat{l}_{1}(-1)^{m_{1}+\frac{3}{2}+J_{1}}\left(\begin{array}{ccc}\frac{1}{2}&J_{1}&l_{1}\\ \sigma_{1}&-M_{1}&m_{1}\end{array}\right)=
 \end{align}
@@ -269,7 +269,7 @@ C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}=(-1)^{\frac{1}{2}+\sigma_{1}}\f
 \begin{align}
 C_{l_{1}-m_{1}L_{1}\mu}^{\lambda'\xi'}=(-1)^{l_{1}+m_{1}}\frac{\hat{\lambda'}}{\hat{L}_{1}}C_{l_{1}-m_{1}\lambda'-\xi'}^{L_{1}-\mu}\rightarrow{\red C_{q\kappa u\nu}^{r\rho}}
 \end{align}
-¼´£º
+å³ï¼š
 \begin{align}
 (-1)^{l_{1}+m_{1}}\frac{\hat{\lambda'}}{\hat{L}_{1}}\hat{L}_{1}(-1)^{\mu+3l_{1}+\lambda'}\left(\begin{array}{ccc}l_{1}&\lambda'&L_{1}\\-m_{1}&-\xi'&\mu\end{array}\right)
 \end{align}
@@ -277,7 +277,7 @@ C_{l_{1}-m_{1}L_{1}\mu}^{\lambda'\xi'}=(-1)^{l_{1}+m_{1}}\frac{\hat{\lambda'}}{\
 \begin{align}
 C_{L_{1}\mu 1k}^{LM}=(-1)^{L_{1}-\mu}\frac{\hat{L}}{\hat{1}}C_{L_{1}\mu L-M}^{1-k}=(-1)^{L_{1}-\mu+L_{1}+L-1}\frac{\hat{L}}{\hat{1}}C_{L_{1}-\mu LM}^{1k}=(-1)^{L-\mu-1}\frac{\hat{L}}{\hat{1}}C_{L_{1}-\mu LM}^{1k}\rightarrow{\red C_{r\rho c\gamma}^{s\sigma}}
 \end{align}
-¼´£º
+å³ï¼š
 \begin{align}
 (-1)^{L-\mu-1}\frac{\hat{L}}{\hat{1}}\hat{1}(-1)^{k+3L_{1}+L}\left(\begin{array}{ccc}L_{1}&L&1\\-\mu&M&-k\end{array}\right)
 \end{align}
@@ -285,14 +285,14 @@ C_{L_{1}\mu 1k}^{LM}=(-1)^{L_{1}-\mu}\frac{\hat{L}}{\hat{1}}C_{L_{1}\mu L-M}^{1-
 \begin{align}
 C_{\frac{1}{2}\sigma_{2}1k}^{\frac{1}{2}\sigma_{1}}=(-1)^{\frac{1}{2}+1-\frac{1}{2}}C_{1k\frac{1}{2}\sigma_{2}}^{\frac{1}{2}\sigma_{1}}\rightarrow{\red C_{s\sigma v\mu}^{p\psi}}
 \end{align}
-¼´£º
+å³ï¼š
 \begin{align}
 (-1)^{1}\hat{\frac{1}{2}}(-1)^{\sigma_{1}+3+\frac{1}{2}}\left(\begin{array}{ccc}1&\frac{1}{2}&\frac{1}{2}\\k&\sigma_{2}&-\sigma_{1}\end{array}\right)
 \end{align}
 
-ÓÃ3J·ûºÅ±íÊ¾³öÀ´£º
+ç”¨3Jç¬¦å·è¡¨ç¤ºå‡ºæ¥ï¼š
 
-ËùÒÔ£º
+æ‰€ä»¥ï¼š
 \begin{align}
 \no&\sum_{m_{1}\sigma_{1}m_{2}\sigma_{2}}\sum_{\mu k\xi'}C_{l_{1}m_{1}\frac{1}{2}\sigma_{1}}^{J_{1}M_{1}}C_{l_{2}m_{2}\frac{1}{2}\sigma_{2}}^{J_{2}M_{2}}C_{L_{1}\mu1k}^{LM}(-1)^{m_{1}}C_{l_{1}-m_{1}L_{1}\mu}^{\lambda'\xi'}C_{\lambda'\xi'l_{2}m_{2}}^{\lambda\xi}C_{\frac{1}{2}\sigma_{2}1k}^{\frac{1}{2}\sigma_{1}}\\
 \no=&(-1)^{m_{1}}(-1)^{\lambda'-\xi'+J_{2}-m_{2}-\frac{1}{2}+1+\sigma_{1}+J_{1}-l_{1}+l_{1}+m_{1}+L-\mu-1+1}\frac{\hat{\lambda}\hat{J}_{2}\hat{J}_{1}\hat{\lambda'}\hat{L}}{\hat{l}_{2}\hat{\frac{1}{2}}\hat{l}_{1}\hat{L}_{1}\hat{1}}\\
@@ -321,5 +321,5 @@ C_{p\psi a\alpha}^{q\kappa}C_{q\kappa u\nu}^{g_{\lambda}} C_{g\lambda v\mu}^{s\s
 %\end{align}
 
 \clearpage
-\end{CJK*}
+% \end{CJK*}
 \end{document}
